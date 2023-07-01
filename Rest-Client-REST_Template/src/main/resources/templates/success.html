@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Ticket Information</h2>
+	<div>
+		<table border="2" >
+			<thead>
+				<tr>
+					<td>Passanger ID</td>
+					<td>Ticket Status</td>
+					<td>Ticket Price</td>
+					<td>Ticket Booking Date</td>
+					<td>Ticket PNR</td>
+					<td>FirstName</td>
+					<td>Lastname</td>
+					<td>Age</td>
+					<td>Contact Number</td>
+					<td>TO Station</td>
+					<td>From Station</td>
+					<td>Journey Date</td>
+					<td>Ticket Count</td>
+					<td>Delete</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="info : ${ticketByid}">
+					<td>
+						<p th:text=${info.passangerId}></p>
+					</td>
+					<td>
+						<p th:text=${info.ticketStatus}></p>
+					</td>
+					<td>
+						<p th:text=${info.ticketPrice}></p>
+					</td>
+					<td>
+						<p th:text=${info.ticketPNR}></p>
+					</td>
+					<td>
+						<p th:text=${info.ticketBookingDate}></p>
+					</td>
+					<td>
+						<p th:text=${info.firstName}></p>
+					</td>
+					<td>
+						<p th:text=${info.lastName}></p>
+					</td>
+					<td>
+						<p th:text=${info.age}></p>
+					</td>
+					<td>
+						<p th:text=${info.contactNumber}></p>
+					</td>
+					<td>
+						<p th:text=${info.toStation}></p>
+					</td>
+					<td>
+						<p th:text=${info.fromStation}></p>
+					</td>
+					<td>
+						<p th:text=${info.journeyDate}></p>
+					</td>
+					<td>
+						<p th:text=${info.ticketCount}></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
